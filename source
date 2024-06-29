@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/untouchablecc/src/main/src?token=GHSAT0AAAAAACUHFHVW75FCV6NNR7KZGQEGZT7RUOQ"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/797ad8eaad60942b08839ab9e76937b4.lua"))()
